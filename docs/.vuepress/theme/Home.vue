@@ -14,3 +14,9 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+  .vuefire-home {
+    padding-top: 6rem;
+    text-align: center;
+  }
+</style>

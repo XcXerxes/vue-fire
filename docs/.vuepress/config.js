@@ -16,7 +16,8 @@ module.exports = {
     editLinks: true,
     nav: [
       {text: '首页', path: '/'},
-      {text: '文档', path: '/development/'}
+      {text: '文档', path: '/development/'},
+      {text: '教程', path: '/pro'}
     ]
   },
   sidebar: [

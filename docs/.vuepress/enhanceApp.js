@@ -1,4 +1,5 @@
 import Box from './theme/box'
+import './main.scss'
 
 export default ({
   Vue,

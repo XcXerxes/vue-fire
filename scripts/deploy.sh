@@ -9,7 +9,7 @@ yarn docs:build
 # navigate into the build output directory
 cd docs/.vuepress/dist
 
-echo '' >CNAME
+echo 'vuefire.9abj.com' >CNAME
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME

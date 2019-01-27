@@ -3,6 +3,7 @@
 </template>
 <script>
 export default {
+  name: 'VfAlert',
   props: {
     msg: {
       type: String,
@@ -11,4 +12,3 @@ export default {
   }
 }
 </script>
-

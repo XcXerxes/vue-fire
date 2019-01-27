@@ -1,0 +1,20 @@
+$vf-primary: rgb(31, 116, 255);
+$vf-secondary: rgb(121, 49, 177);
+$vf-danger: rgb(255, 71, 87);
+$vf-success: rgb(70, 201, 58);
+$vf-warning: rgb(155, 186, 0);
+$vf-dark:rgb(30, 30, 30);
+$vf-light: rgb(245, 245, 245);
+
+:root {
+  --vf-primary: $vf-primary;
+  --vf-secondary: $vf-secondary;
+  --vf-danger: $vf-danger;
+  --vf-success: $vf-success;
+  --vf-warning: $vf-warning;
+  --vf-dark: $vf-dark;
+  --vf-light: $vf-light;
+}
+
+body {
+}
