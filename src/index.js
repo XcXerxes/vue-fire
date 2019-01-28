@@ -1,4 +1,5 @@
 import * as vsComponents from './components'
+import './styles/vuefire.scss'
 
 const install = (Vue, options) => {
   console.log(vsComponents)

@@ -12,6 +12,7 @@
     "docs:deploy": "sh scripts/deploy.sh"
   },
   "dependencies": {
+    "viewcode": "^0.0.27",
     "vue": "^2.5.21"
   },
   "devDependencies": {

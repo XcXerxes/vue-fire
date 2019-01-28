@@ -1,0 +1,5 @@
+pre[class="language-html"], pre[class="language-markup"]{
+  &:before{
+    content: "html";
+  }
+}
