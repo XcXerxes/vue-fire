@@ -1,5 +1,7 @@
 <template>
-  <div>{{msg}}</div>
+  <transition name="alertSlide">
+    <div class="vf-alert"></div>
+  </transition>
 </template>
 <script>
 export default {

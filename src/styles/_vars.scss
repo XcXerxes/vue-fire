@@ -15,10 +15,3 @@ $vf-light: rgb(245, 245, 245);
   --vf-dark: $vf-dark;
   --vf-light: $vf-light;
 }
-
-.content pre, .content pre[class*=language-] {
-  background-color: #f5f7fb!important; 
-}
-.content pre[class*=language-] code, .content pre code {
-  color: rgba(0, 0, 0, .65);
-}
