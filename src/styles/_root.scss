@@ -1,0 +1,12 @@
+:root {
+  @each $name, $color in $vf-colors {
+    --vf-#{$name}: #{$color};
+  }
+  // --vf-primary: rgb(31, 116, 255);
+  // --vf-secondary: rgb(121, 49, 177);
+  // --vf-danger: rgb(255, 71, 87);
+  // --vf-success: rgb(70, 201, 58);
+  // --vf-warning: rgb(155, 186, 0);
+  // --vf-dark: rgb(30, 30, 30);
+  // --vf-light: rgb(245, 245, 245);
+}

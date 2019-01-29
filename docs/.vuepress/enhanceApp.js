@@ -1,7 +1,8 @@
+import './main.scss'
+import Vuefire from '../../src'
 import Box from './theme/box'
 import Vuecode from 'viewcode/dist/vuecode.common.js'
 import 'viewcode/dist/vuecode.css'
-import './main.scss'
 
 export default ({
   Vue,
@@ -9,8 +10,7 @@ export default ({
   router,
   siteData
 }) => {
-  console.log('=============options',options)
-  console.log('==============siteData', siteData)
+  Vue.use(Vuefire)
   Vue.use(Vuecode,{
     theme:'flat'
   })

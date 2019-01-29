@@ -20,4 +20,18 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.content-box{
+  .box {
+    margin-bottom: 15px;
+    p {
+          width: 100%;
+          padding: 6px 20px;
+          background: transparent!important;
+          margin-top: 0;
+    }
+  }
+}
+</style>
+
 

@@ -1,0 +1,62 @@
+.com-vf-alert {
+  border-radius: 6px;
+  color: #fff;
+  width: 100%;
+  position: relative;
+  font-size: .8rem;
+  transition: all .3s ease;
+  overflow: hidden;
+
+  .vf-alert__icon {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+}
+.vf-alert {
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  padding-left: 15px;
+  &.close-icon {
+    padding-right: 40px;
+  }
+  &.has-icon {
+    padding-left: 40px;
+  }
+}
+
+.vf-alert__title {
+  padding: 8px 15px;
+  font-size: 1rem;
+}
+
+
+
+@each $name, $color in $vf-colors {
+ .com-vf-alert-#{$name} {
+   background-color: getColor($name, .15);
+   color: getColor($name, 1);
+   box-shadow: 0px 0px 25px 0px getColor(colorx, .15);
+ }
+}
+
+.vf-alert__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 30;
+  cursor: pointer;
+}
+// .slideDown-leave-active {
+//   transition: all .4s ease;
+// }
+// .slideDown-leave-to {
+//   height: 0;
+// }
+

@@ -14,3 +14,4 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default install
 
 export { default as vfAlert } from './components/vfAlert'
+export { default as vfIcon } from './components/vfIcon'

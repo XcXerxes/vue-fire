@@ -1,0 +1,3 @@
+@function getColor($colorx, $alpha: 1) {
+  @return  #{unquote("rgba(var(--vf-"+$colorx+"), "+$alpha+")")};
+}

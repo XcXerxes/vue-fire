@@ -1,24 +1,24 @@
-$vf-primary: rgb(31, 116, 255);
-$vf-secondary: rgb(121, 49, 177);
-$vf-danger: rgb(255, 71, 87);
-$vf-success: rgb(70, 201, 58);
-$vf-warning: rgb(155, 186, 0);
-$vf-dark:rgb(30, 30, 30);
-$vf-light: rgb(245, 245, 245);
+// $vf-primary: rgb(31, 116, 255);
+// $vf-secondary: rgb(121, 49, 177);
+// $vf-danger: rgb(255, 71, 87);
+// $vf-success: rgb(70, 201, 58);
+// $vf-warning: rgb(155, 186, 0);
+// $vf-dark:rgb(30, 30, 30);
+// $vf-light: rgb(245, 245, 245);
 
-:root {
-  --vf-primary: $vf-primary;
-  --vf-secondary: $vf-secondary;
-  --vf-danger: $vf-danger;
-  --vf-success: $vf-success;
-  --vf-warning: $vf-warning;
-  --vf-dark: $vf-dark;
-  --vf-light: $vf-light;
-}
+// :root {
+//   --vf-primary: $vf-primary;
+//   --vf-secondary: $vf-secondary;
+//   --vf-danger: $vf-danger;
+//   --vf-success: $vf-success;
+//   --vf-warning: $vf-warning;
+//   --vf-dark: $vf-dark;
+//   --vf-light: $vf-light;
+// }
 
 .content pre, .content pre[class*=language-] {
-  background-color: #f5f7fb!important; 
+  background-color: #fafafa!important; 
 }
 .content pre[class*=language-] code, .content pre code {
-  color: rgba(0, 0, 0, .65);
+  color: rgba(0, 0, 0, .65)!important;
 }
