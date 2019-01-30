@@ -5,10 +5,11 @@
     @leave="leave"
   >
     <div class="com-vf-alert"
-    ref="alert"
+      ref="alert"
       :class="[`com-vf-alert-${type}`]"
       v-if="active"
       v-bind="$attrs"
+      v-on="$listeners"
     >
     <h4
       v-if="title"
@@ -35,7 +36,7 @@ export default {
   name: 'VfAlert',
   props: {
     active: {
-      type: Boolean,
+      type: [Boolean, String],
       default: true
     },
     title: {
@@ -87,8 +88,11 @@ export default {
       el.style.opacity = 0
     },
     closeClick() {
-      debugger
-      this.$emit('close', !this.active)
+      if ('close' in this.$listeners) {
+        this.$emit('close', !this.active)
+      } else {
+        this.$emit('update:active', !this.active)
+      }
     }
   }
 }

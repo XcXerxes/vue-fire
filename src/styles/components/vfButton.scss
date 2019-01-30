@@ -1,0 +1,35 @@
+.vf-button {
+  padding: 10px;
+  border: 0;
+  transition: all .3s ease;
+  border-radius: $vfRaido;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color: $vfButtonColor;
+  @each $name, $color in $vf-colors{
+    &.vf-button__#{$name} {
+      &.vf-button__filled {
+        background-color: getColor($name);
+      }
+      &:hover {
+        box-shadow: 0px 8px 25px -8px getColor($name);
+      }
+    }
+  }
+
+  &:disabled {
+    opacity: .5;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+.vf-button--background {
+  border-radius: 50%;
+  width: 10px;
+  position: absolute;
+  height: 10px;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  box-shadow:inset 0px 0px 60px 0px rgba(255, 255, 255,.5);
+}

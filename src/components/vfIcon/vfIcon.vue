@@ -18,6 +18,10 @@ export default {
     iconPack: {
       type: String,
       default: 'material-icons'
+    },
+    size: {
+      type: String,
+      default: 'medium'
     }
   },
   computed: {
@@ -25,10 +29,9 @@ export default {
       return {}
     },
     iconClass() {
-      const {iconPack, icon} = this
-      debugger
+      const {iconPack, icon, size} = this
       const defaultIcon = iconPack == 'material-icons' ? icon : ''
-      return [iconPack, defaultIcon]
+      return [iconPack, defaultIcon, size]
     }
   }
 }

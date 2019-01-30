@@ -42,7 +42,7 @@
  .com-vf-alert-#{$name} {
    background-color: getColor($name, .15);
    color: getColor($name, 1);
-   box-shadow: 0px 0px 25px 0px getColor(colorx, .15);
+   box-shadow: 0px 0px 25px 0px getColor($name, .15);
  }
 }
 

@@ -15,3 +15,4 @@ export default install
 
 export { default as vfAlert } from './components/vfAlert'
 export { default as vfIcon } from './components/vfIcon'
+export { default as vfButton } from './components/vfButton'
