@@ -2,11 +2,17 @@
   <button class="vf-button"
     ref="btn"
     v-bind="$attrs"
-    :class="[`vf-button__${type}`, `vf-button__${mode}`]" 
+    :class="[`vf-button__${type}`, `vf-button__${mode}`, {
+      'include-icon': formatIcon
+    }, size]" 
     style="margin-right: 8px;"
     v-on="listeners"
     >
+    <vf-icon v-if="icon" :icon="icon" :style="iconStyle" />
+    <slot v-if="!icon" name="prefix">
+    </slot>
     <span
+      v-if="mode === 'filled'"
       ref="backgroundx"
       :style="stylesBackGround"
       class="vf-button__backgroundx vf-button--background">
@@ -14,6 +20,9 @@
     <span class="vf-button__text">
       <slot />
     </span>
+    <slot v-if="!icon" name="suffix">
+      
+    </slot>
   </button>
 </template>
 <script>
@@ -26,6 +35,38 @@ export default {
     type: {
       type: String,
       default: 'primary'
+    },
+    bordered: {
+      type: Boolean,
+      default: false
+    },
+    icon: {
+      type: String,
+      default: ''
+    },
+    iconPosition: {
+      type: String,
+      default: 'prefix'
+    },
+    size: {
+      type: String,
+      default: 'default'
+    },
+    href: {
+      type: String,
+      default: '/'
+    },
+    target: {
+      type: Boolean,
+      default: false
+    },
+    to: {
+      type: Object | String,
+      default: false
+    },
+    href: {
+      type: String,
+      default: ''
     }
   },
   name: 'VfButton',
@@ -39,6 +80,24 @@ export default {
     opacity: 1
   }),
   computed: {
+    formatIcon() {
+      // if(this.icon || this.$slots.prefix || this.$slots.suffix) {
+      //   return true
+      // }
+      // return false
+      return Boolean(this.icon || this.$slots.prefix || this.$slots.suffix)
+    },
+    iconStyle() {
+      if (this.iconPosition === 'suffix') {
+        return {
+          order: 2,
+          marginLeft: this.$slots.default ? '3px' : 0
+        }
+      }
+      return {
+        marginRight: this.$slots.default ? '3px' : 0
+      }
+    },
     stylesBackGround() {
       return {
         background: null,
@@ -66,6 +125,14 @@ export default {
       this.$emit('click', event)
       if (this.isActive) {
         return
+      }
+      // 如果作为 router
+      if(this.to) {
+        this.$router.push(this.to)
+      }
+      // 如果作为 href
+      if (this.href) {
+        this.target ? window.open(this.href) : window.location.href = this.href
       }
 
       //点击的波纹效果

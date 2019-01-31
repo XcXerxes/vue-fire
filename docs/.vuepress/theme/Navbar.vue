@@ -1,7 +1,7 @@
 <template>
   <header class="navbar" @click="click">
     <router-link :to="$localePath" class="home-link">
-      <div class="logo"></div>
+      <div class="logo">Vuefire</div>
     </router-link>
     <NavLinks />
   </header>
@@ -34,7 +34,8 @@ export default {
   height: 2.3rem;
   .logo {
     width: inherit;
-    background: url('../public/vuesax-logo-vertical.png') no-repeat center center;
+    line-height: 2.3rem;;
+    // background: url('../public/vuesax-logo-vertical.png') no-repeat center center;
     background-size: cover;
     
   }

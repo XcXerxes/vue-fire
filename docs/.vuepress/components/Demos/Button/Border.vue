@@ -3,6 +3,7 @@
     <vf-button
     v-for="(item, key) in list" :key="key" :type="item.type"
     :disabled="key === list.length - 1 ? true : false"
+    mode="border"
     >{{item.name}}</vf-button>
   </div>
 </template>

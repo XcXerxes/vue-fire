@@ -1,19 +1,43 @@
 .vf-button {
-  padding: 10px;
+  padding: 0px 10px;
   border: 0;
   transition: all .3s ease;
   border-radius: $vfRaido;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
   color: $vfButtonColor;
   @each $name, $color in $vf-colors{
     &.vf-button__#{$name} {
       &.vf-button__filled {
         background-color: getColor($name);
+        &:hover {
+          box-shadow: 0px 8px 25px -8px getColor($name);
+        }
       }
-      &:hover {
-        box-shadow: 0px 8px 25px -8px getColor($name);
+      &.vf-button__border {
+        border: 1px solid getColor($name, .5);
+        color: getColor($name);
+        &:hover {
+          background-color: getColor($name, .08);
+        }
+        &.default {
+          line-height: 30px;
+        }
+        &.small {
+          line-height: 22px;
+        }
+        &.large {
+          line-height: 38px;
+        }
+      }
+      &.include-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        line-height: normal;
       }
     }
   }
@@ -22,6 +46,22 @@
     opacity: .5;
     cursor: default;
     pointer-events: none;
+  }
+  &.default {
+    height: 32px;
+    line-height: 32px;
+  }
+  &.small {
+    height: 24px;
+    padding: 0 7px;
+    border-radius: 4px;
+    line-height: 24px;
+  }
+  &.large {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    font-size: 1rem;
   }
 }
 .vf-button--background {

@@ -1,0 +1,25 @@
+.vf-input {
+  width: 100%;
+  height: 32px;
+  box-sizing: border-box;
+  @each $name, $color in $vf-colors {
+    &.vf-input__#{$name} {
+      >input {
+        &:focus {
+          border-color: getColor($name);
+          box-shadow: 0 3px 10px 0 rgba(0,0,0,.15)
+        }
+      }
+    }
+  }
+  >input {
+    width: inherit;
+    height: inherit;
+    box-sizing: border-box;
+    border: 0;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    padding: 4px 11px;
+    transition: all .3s ease;
+  }
+}
