@@ -18,16 +18,27 @@ module.exports = {
       {text: '首页', path: '/'},
       {text: '文档', path: '/development/'},
       {text: '教程', path: '/pro'}
+    ],
+    sidebar: [
+      {
+        title: '起步',
+        icon: 'home',
+        collapsable: false,
+        children: [
+          '/development/'
+        ]
+      },
+      {
+        title: 'Components',
+        icon: 'menu',
+        collapsable: false,
+        children: [
+          '/components/',
+          '/components/alert',
+          '/components/button',
+          '/components/input',
+        ]
+      }
     ]
   },
-  sidebar: [
-    {
-      title: 'Components',
-      collapsable: false,
-      children: [
-        '/components/',
-        'components/alert'
-      ]
-    }
-  ]
 }
