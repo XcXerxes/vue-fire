@@ -2,6 +2,7 @@
   <div class="vf-input"
     :class="[`vf-input__${color}`]"
   >
+    <vf-icon v-if="prefixIcon" :icon="prefixIcon"   />
     <input :type="$attrs.type || 'text'"
       ref="input"
       :value="value"
@@ -13,6 +14,7 @@
       class="vf-input__placeholder"
       @click="placeholderClick"
     >{{$attrs.placeholder}}</span>
+    <vf-icon v-if="suffixIcon" :icon="suffixIcon" />
   </div>
 </template>
 <script>
@@ -26,6 +28,14 @@ export default {
     color: {
       type: String,
       default: 'primary'
+    },
+    prefixIcon: {
+      type: String,
+      default: ''
+    },
+    suffixIcon: {
+      type: String,
+      default: ''
     }
   },
   data: () =>({
@@ -33,7 +43,6 @@ export default {
   }),
   computed: {
     listeners() {
-      debugger
       return {
         ...this.$listeners,
         
