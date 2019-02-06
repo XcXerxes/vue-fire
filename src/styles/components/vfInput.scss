@@ -26,6 +26,25 @@
       }
     }
   }
+  &.prefix-icon {
+    >input {
+      padding-left: 28px;
+      &:focus {
+        +.vf-input__placeholder {
+          padding-left: 34px;
+        }
+      }
+    }
+    .vf-input__placeholder {
+      padding-left: 28px;
+    }
+
+  }
+  &.suffix-icon {
+    >input {
+      padding-right: 28px;
+    }
+  }
   >input {
     width: inherit;
     height: inherit;
@@ -36,6 +55,19 @@
     border-radius: 5px;
     padding: 4px 11px;
     transition: all .3s ease;
+  }
+  .vf-input__icon {
+    position: absolute;
+    z-index: 15;
+    color: rgba(0, 0, 0, 0.15);
+    top: 50%;
+    transform: translateY(-50%);
+    &.prefix {
+      left: 5px;
+    }
+    &.suffix {
+      right: 5px;
+    }
   }
 }
 .vf-input__placeholder {

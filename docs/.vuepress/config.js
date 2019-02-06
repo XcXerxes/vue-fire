@@ -17,7 +17,7 @@ module.exports = {
     nav: [
       {text: '首页', path: '/'},
       {text: '文档', path: '/development/'},
-      {text: '教程', path: '/pro'}
+      {text: '教程', path: '/pro/'}
     ],
     sidebar: [
       {

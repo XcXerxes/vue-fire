@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-group">
     <div class="sidebar-heading">
-      <vf-icon :icon="item.icon" />
+      
       <span>{{item.title}}</span>
     </div>
     <ul class="sidebar-group__list">

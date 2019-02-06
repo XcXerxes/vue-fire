@@ -4,10 +4,8 @@ export function resolveSidebarItems(site, _) {
   const items = sidebar.map((item) => {
     const arr = []
     item.children.forEach((child) => {
-      console.log(child)
       const obj = {}
       pages.forEach((page, index) => {
-        debugger
         const path = page.path.indexOf('.') > -1 ? page.path.substr(0, page.path.indexOf('.')) : page.path
         if(path === child) {
           obj.path = page.path
@@ -19,6 +17,25 @@ export function resolveSidebarItems(site, _) {
     })
     return {...item, children: arr}
   })
-  console.log(items)
+  // const items = sidebar.map(item => {
+  //   const children = item.children.map(child => {
+  //     const arr = pages.map((page, index) => {
+  //       // 获取路径值
+  //       const path = page.path.indexOf('.') > -1 ? page.path.substr(0, page.path.indexOf('.')) : page.path
+  //       if (path === child) {
+  //         return {
+  //           path: page.path,
+  //           title: page.title,
+  //           key: page.key
+  //         }  
+  //       }
+  //       return {}
+  //     })
+  //     console.log(arr)
+  //     return [...arr]
+  //   })
+  //   return {...item, children}
+  // })
+  // console.log(items)
   return items
 }
