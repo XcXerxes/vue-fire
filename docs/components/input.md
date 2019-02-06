@@ -87,3 +87,17 @@ export default {
 </vuecode>
 
 </box>
+
+<box>
+
+### Colors
+
+可以通过设置 ```color``` 属性 修改 ```hover``` 时边框的颜色
+
+<vuecode md>
+  <div slot="demo">
+    <Demos-Input-Colors />
+  </div>
+</vuecode>
+
+</box>
