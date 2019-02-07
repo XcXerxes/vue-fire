@@ -1,0 +1,46 @@
+.vf-avatar {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+  background: rgb(195, 195, 195);
+  @each $name, $color in $vf-colors {
+    &.vf-avatar__#{$name} {
+      background: getColor($name);
+
+      // .vf-avatar__text {
+      //   color: #fff;
+      // }
+    }
+  }
+  &.vf-avatar__small {
+    width: 24px;
+    height: 24px;
+  }
+  &.vf-avatar__large {
+    width: 50px;
+    height: 50px;
+  }
+
+  .vf-avatar__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    white-space: nowrap;
+  }
+  .vf-avatar__img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+}

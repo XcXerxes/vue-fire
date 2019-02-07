@@ -1,0 +1,14 @@
+.vf-breadcrumb__items {
+  display: flex;
+}
+.vf-breadcrumb__item{
+  &.disabled{
+    span {
+      color: rgba(0, 0, 0, .45);
+    }
+  }
+}
+
+.vf-breadcrumb__separator {
+  margin: 0 8px;
+}
