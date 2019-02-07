@@ -10,7 +10,7 @@
           <span>{{item.title}}</span>
           <span v-if="key < getItems.length - 1" class="vf-breadcrumb__separator">{{separator}}</span>
         </li>
-        <li :key="key" v-else>
+        <li :key="key" class="vf-breadcrumb__item"  v-else>
           <a :href="item.link">{{item.title}}</a>
           <span class="vf-breadcrumb__separator">{{separator}}</span>
         </li>

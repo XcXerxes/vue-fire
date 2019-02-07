@@ -1,10 +1,21 @@
 .vf-breadcrumb__items {
   display: flex;
 }
+@each $name, $color in $vf-colors {
+  
+}
 .vf-breadcrumb__item{
   &.disabled{
     span {
-      color: rgba(0, 0, 0, .45);
+      // color: rgba(0, 0, 0, .45);
+    }
+  }
+  a {
+    font-weight: 400;
+    color: rgba(0, 0, 0, .45);
+    transition: all .3s ease;
+    &:hover {
+      color: #5b3cc4;
     }
   }
 }
