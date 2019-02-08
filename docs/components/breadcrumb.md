@@ -11,3 +11,14 @@
 </vuecode>
 
 </box>
+<box>
+
+### 分隔符
+
+<vuecode md>
+<div slot="demo">
+  <Demos-Breadcrumb-Separator />
+</div>
+</vuecode>
+
+</box>

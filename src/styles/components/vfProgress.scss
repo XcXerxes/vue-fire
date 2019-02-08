@@ -1,0 +1,49 @@
+.vf-progress {
+  width: 100%;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, .06);
+  position: relative;
+  overflow: hidden;
+  .vf-progress__foreground {
+    height: 100%;
+    transition:  all .5s ease;
+    border-radius: 18px;
+  }
+  @each $name, $color in $vf-colors{
+    &.vf-progress__#{$name} {
+      background: getColor($name, .1);
+
+      .vf-progress__foreground {
+        background: getColor($name);
+      }
+      .vf-progress__indeterminate{
+        background: getColor($name);
+      }
+    }
+  }
+}
+.vf-progress__indeterminate {
+  position: absolute;
+  width: 0%;
+  bottom: 0;
+  left: -100%;
+  top: 0;
+  border-radius: 20px;
+  animation: indeterminate 1.4s ease infinite;
+  z-index: 30;
+}
+
+@keyframes indeterminate{
+  0% {
+    width: 30%;
+    left: -20%;
+  }
+  60% {
+    left: 100%;
+    width:100%;
+  }
+  100% {
+    left: 100%;
+    width:0%;
+  }
+}
