@@ -1,4 +1,4 @@
-## 进度条 progress
+## Progress 进度条
 
 <box>
 

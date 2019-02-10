@@ -1,4 +1,4 @@
-## 头像 Avatar
+## Avatar 头像
 
 <box>
 

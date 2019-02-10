@@ -37,6 +37,10 @@ module.exports = {
           '/components/alert',
           '/components/button',
           '/components/input',
+          '/components/avatar',
+          '/components/progress',
+          '/components/breadcrumb',
+          '/components/checkbox',
         ]
       }
     ]

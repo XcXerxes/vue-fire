@@ -1,6 +1,8 @@
 <template>
   <div
     class="vf-avatar"
+    v-on="$listeners"
+    v-bind="$attrs"
     :class="{
       [`vf-avatar__${color}`]: !src && color,
       [`vf-avatar__${size}`]: size
