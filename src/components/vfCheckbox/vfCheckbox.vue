@@ -100,7 +100,6 @@ export default {
     setValueArray() {
       const newValue = [...this.value]
       if (this.isArrayInclude()) {
-        debugger
         const value = [...this.value.slice(0, this.value.indexOf(this.vfValue)), ...this.value.slice(this.value.indexOf(this.vfValue) + 1)]
         this.$emit('input', value)
         this.$emit('change', value)

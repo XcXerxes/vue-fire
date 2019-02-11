@@ -40,6 +40,13 @@
         }
       }
     }
+    &:disabled {
+      +.vf-checkbox__wrapper {
+        opacity: .5;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
   }
 
   @each $name, $color in $vf-colors {
