@@ -1,0 +1,59 @@
+.vf-radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 8px;
+  >input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    cursor: pointer;
+    opacity: 0;
+  }
+  @each $name, $color in $vf-colors {
+    &.vf-radio__#{$name} {
+      >input{
+        &:checked {
+          +.vf-radio__check {
+            .vf-radio__borde {
+              border-color: getColor($name);
+            }
+            .vf-radio__circle {
+              opacity: 1;
+              background: getColor($name);
+              transform: scale(.4);
+            }
+          }
+        }
+      }
+      .vf-radio__circle {
+        box-shadow: 0 3px 12px 0 getColor($name, .4);
+      }
+    }
+  }
+}
+.vf-radio__check {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 6px;
+}
+.vf-radio__borde {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #b4b4b4;
+  transition: all .3s ease;
+}
+.vf-radio__circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all .3s ease;
+  transform: scale(0);
+  opacity: 0;
+}

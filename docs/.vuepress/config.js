@@ -41,6 +41,7 @@ module.exports = {
           '/components/progress',
           '/components/breadcrumb',
           '/components/checkbox',
+          '/components/radio',
         ]
       }
     ]
