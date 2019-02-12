@@ -92,6 +92,7 @@ export default {
       let topx = 0
       let leftx = 0
       let widthx = 0
+      // window.pageYOffset == window.scrollY
       let scrollTopx = window.pageYOffset || document.documentElement.scrollTop
       const rectTop = inputSelect.getBoundingClientRect().top
       const optScrollHeight = vfSelectOptions.scrollHeight
