@@ -42,6 +42,7 @@ module.exports = {
           '/components/breadcrumb',
           '/components/checkbox',
           '/components/radio',
+          '/components/select',
         ]
       }
     ]
