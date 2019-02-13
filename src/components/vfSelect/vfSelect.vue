@@ -94,8 +94,13 @@ export default {
       let widthx = 0
       // window.pageYOffset == window.scrollY
       let scrollTopx = window.pageYOffset || document.documentElement.scrollTop
+      // 当前元素相对于屏幕左上角的top 值
       const rectTop = inputSelect.getBoundingClientRect().top
+      // options列表的滚动高度
       const optScrollHeight = vfSelectOptions.scrollHeight
+      /**
+       * 适配 select 是下开 还是 上开
+       */
       if ( rectTop + optScrollHeight + 20 >= window.innerHeight) {
         topx = (rectTop + inputSelect.clientHeight) + scrollTopx - vfSelectOptions.scrollHeight
       } else {
