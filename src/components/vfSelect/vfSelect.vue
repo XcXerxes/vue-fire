@@ -1,5 +1,9 @@
 <template>
-  <div class="vf-select">
+  <div class="vf-select"
+    :class="{
+      'active': active
+    }"
+  >
     <div class="vf-select__input">
       <input type="text"
         ref="inputSelect"
@@ -7,6 +11,7 @@
         v-bind="$attrs"
         v-on="listeners"
         :readonly="!autocomplete"
+        :value="valuex"
       >
       <vf-icon
         :icon="icon"
@@ -32,13 +37,22 @@ export default {
   name: 'vfSelect',
   data: () =>({
     active: false,
-    cords: {}
+    cords: {},
+    valuex: ''
   }),
   props: {
     value: {},
+    multiple: {
+      type: Boolean,
+      default: false
+    },
     placeholder: {
       type: String,
       default: '请选择...'
+    },
+    color: {
+      type: String,
+      default: 'primary'
     },
     icon: {
       type: String,
@@ -76,7 +90,7 @@ export default {
         },
         blur: event => {
           this.$emit('blur', event)
-          this.active = false
+          // this.active = false
         }
       }
     }

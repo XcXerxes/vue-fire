@@ -1,5 +1,10 @@
 .vf-select {
   width: 200px;
+  &.active {
+    .select-icon {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
   &__input{
     position: relative;
     >input{
@@ -23,7 +28,7 @@
       position: absolute;
       right: 5px;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-50%) rotate(0deg);
       pointer-events: none;
       transition: all .3s ease;
       color: inherit;
@@ -38,6 +43,56 @@
     background: #fff;
     z-index: 40000;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .05);
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 7px 5px;
+    text-align: left;
+    color: rgba(0,0,0,.8);
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+      background: #f5f5f5;
+    }
+    &-content {
+      color: inherit;
+      cursor: pointer;
+      flex: 1;
+      order: 2;
+      // transform: translateX(-18px);
+      transition: all .3s ease;
+    }
+    &-icon {
+      transition: all .3s ease;
+      margin-right: 5px;
+      font-size: 1.0625em;
+      // transform: translateX(-30px);
+    }
+    &.multiple-active {
+      .vf-select__item-content {
+        transform: translateX(0);
+      }
+      .vf-select__item-icon {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+@each $name, $color in $vf-colors {
+  .vf-select__item-#{$name} {
+    &.multiple-active, 
+    &.active
+    {
+      background: getColor($name, .1);
+      color: getColor($name);
+    }
   }
 }
 
