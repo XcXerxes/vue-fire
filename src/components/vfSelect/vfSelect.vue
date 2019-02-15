@@ -129,7 +129,6 @@ export default {
       }
     },
     focus(event) {
-      debugger
       this.active = true
       let {inputSelect} = this.$refs
       if (!this.autocomplete) {
@@ -139,6 +138,9 @@ export default {
         this.cords = this.changePosition()
       })
     }
+  },
+  created() {
+    console.log('parent')
   }
 }
 </script>

@@ -43,6 +43,10 @@
     background: #fff;
     z-index: 40000;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .05);
+    >ul {
+      overflow: auto;
+      max-height: 260px;
+    }
   }
   &__item {
     display: flex;

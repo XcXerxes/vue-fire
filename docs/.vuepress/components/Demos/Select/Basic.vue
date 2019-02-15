@@ -14,13 +14,18 @@
 <script>
 export default {
   data: () =>({
-    selectx: '',
+    selectx: 1,
     options: [
       {label:'Giselle',value:1},
       {label:'Araldo',value:2},
       {label:'Gwyn',value:3},
       {label:'Farrel',value:4},
-      {label:'Maggi',value:5}
+      {label:'Maggi',value:5},
+      {label:'Maggi',value:6},
+      {label:'Maggi',value:7},
+      {label:'Maggi',value:8},
+      {label:'Maggi',value:9},
+      {label:'Maggi',value:10}
     ]
   })
 }

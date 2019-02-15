@@ -4,7 +4,8 @@
       'multiple-active': isMultipleActive,
       'active': isActive
     }, `vf-select__item-${$parent.color}`]"
-    @click="itemClick"
+    v-bind="$attrs"
+    v-on="listeners"
   >
     <span class="vf-select__item-content">{{text}}</span>
     <i v-if="$parent.multiple" class="material-icons icon-item vf-select__item-icon">check_circle</i>
@@ -13,6 +14,7 @@
 <script>
 export default {
   name: 'vfSelectItem',
+  inheritAttrs: false,
   data: () => ({
     active: false
   }),
@@ -26,6 +28,12 @@ export default {
     }
   },
   computed: {
+    listeners() {
+      return {
+        ...this.$listeners,
+        click: (event) => this.itemClick(event)
+      }
+    },
     isActive() {
       if (!this.$parent.multiple) {
         return this.value === this.$parent.value
@@ -40,7 +48,7 @@ export default {
     }
   },
   methods: {
-    itemClick() {
+    itemClick(event) {
       if (this.$parent.multiple) {
         this.active = true
       } else if (!this.$parent.multiple) {
@@ -48,7 +56,16 @@ export default {
         this.$parent.valuex = this.text
         this.$parent.$emit('input', this.value)
       }
+    },
+    setValue() {
+      if (this.$parent.value === this.value) {
+        this.$parent.valuex = this.text
+      }
     }
+  },
+  created() {
+    console.log('item')
+    this.setValue()
   }
 }
 </script>
